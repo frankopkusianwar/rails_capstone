@@ -6,6 +6,6 @@ class UsersController < ApplicationController
     @user = User.new(params.require(:user).permit(:fullname, :username))
     @user.save
     session[:user_id] = @user.id
-    redirect_to feed_path
+    redirect_to opinions_path
   end
 end

@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:username])
     if @user && @user.username == params[:username]
       session[:user_id] = @user.id 
-      redirect_to feed_path
+      redirect_to opinions_path
     else
       redirect_to root_path
     end
