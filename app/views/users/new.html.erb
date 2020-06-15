@@ -1,12 +1,3 @@
-<header class="container-fluid">
-  <nav class="d-flex justify-content-between">
-    <p>logo</p>
-    <div>
-      <%= link_to "Login", root_path  %>
-      <%= link_to "Sign Up", signup_path  %>
-    </div>
-  </nav>
-</header>
 <div class="container">
   <%= form_with model: @user, local: true do |f| %>
     <div class="form-group">

@@ -1,0 +1,17 @@
+
+  <% if session[:user_id] && session[:user_id] != nil%>
+    <%= render 'layouts/side'%>
+    <header class='d-flex justify-content-end main'>
+      <%= link_to "Log out", logout_path,  method: :delete %>
+    </header>
+  <% else %>
+    <header class="container-fluid">
+      <nav class="d-flex justify-content-between">
+        <p>logo</p>
+        <div>
+          <%= link_to "Login", root_path  %>
+          <%= link_to "Sign Up", signup_path  %>
+        </div>
+      </nav>
+    </header>
+  <%end%>

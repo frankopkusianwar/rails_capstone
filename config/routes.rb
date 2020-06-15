@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
   post '/', to: 'sessions#create'
   get 'signup', to: 'users#new'
+  delete 'logout', to: 'sessions#destroy'
   resources :users
   resources :opinions 
 end
