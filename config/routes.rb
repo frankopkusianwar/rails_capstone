@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   post '/', to: 'sessions#create'
   get 'signup', to: 'users#new'
   delete 'logout', to: 'sessions#destroy'
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :opinions 
+  resources :followings, only: [:create, :destroy]
 end

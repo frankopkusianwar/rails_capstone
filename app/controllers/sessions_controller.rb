@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(username: params[:username])
     if @user && @user.username == params[:username]
-      session[:user_id] = @user.id 
+      log_in @user 
       redirect_to opinions_path
     else
       redirect_to root_path
@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    log_out
     redirect_to root_path
   end
 end

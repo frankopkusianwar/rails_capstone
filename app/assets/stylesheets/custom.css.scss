@@ -1,7 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 header { 
- background: #00acee;
+ background: #1DA1F2;
 }
 
 // side nav  
@@ -12,7 +12,7 @@ header {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #14171A;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -38,4 +38,8 @@ header {
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+body {
+  background: #E1E8ED;
 }
