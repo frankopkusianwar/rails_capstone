@@ -1,18 +1,19 @@
 <div class="container-fluid page-content">
   <div class="row">
-    <div class="col-10">
-      <nav class='opinion_nav'>
-        <%= link_to 'opinions', opinions_path %>
+    <div class="col-9">
+      <nav class='opinion_nav mb-3 mt-3'>
+        <h6>Recent Opinions</h6>
       </nav>
       <%= render 'opinion_form'%>
       <%= render 'user_opinions'%>
     </div>
-    <div class="col-2">
-      <h6>Who to follow</h6>
+    <div class="col-3 col-left-border">
+      <div class="who-border text-center mb-2 mt-3"><h6 class="font-weight-bold">Who to follow</h6></div>
         <% @users.each do |us|%>
           <% unless current_user?(us) %>
             <% unless current_user.following?(us) %>
-              <h6><%= link_to us.fullname, user_path(us) %></h6>
+              <div class="ml-3 mt-2"><small><%= link_to us.fullname, user_path(us), class: "text-dark text-decoration-none font-weight-bold"%></small></div>
+              <div class="ml-3 border-bottom border-light pb-1"><small>@<%= us.username %></small></div>
             <%end%>
           <%end%>
         <%end%>

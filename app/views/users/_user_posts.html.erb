@@ -1,5 +1,7 @@
-<div class="container bg-white p-3 mt-2">
+<div class="container p-3 mt-2">
   <% @opinions.each do |op| %>
-    <%= op.Text %>
+    <div class="bg-white mt-3">
+      <p class = "p-1" ><%= op.Text %></p>
+    </div>
   <%end%>
 </div>

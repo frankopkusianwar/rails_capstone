@@ -1,14 +1,14 @@
-<div class="row">
-  <div class="col-6 text-center">
+<div class="row mx-1">
+  <div class="col-6 text-center border border-dark">
     <strong id="following" class="stat">
-      <p class="text-white"><%= current_user.following.count %></p>
+      <p class="text-muted"><%= current_user.following.count %></p>
     </strong>
-    <small class="text-white">following</small>
+    <small class="text-muted">following</small>
   </div>
-  <div class="col-6 text-center">
+  <div class="col-6 text-center border border-dark">
     <strong id="followers" class="stat">
-      <p class="text-white"><%= current_user.followers.count %></p>
+      <p class="text-muted"><%= current_user.followers.count %></p>
     </strong>
-    <small class="text-white">followers</small>
+    <small class="text-muted">followers</small>
   </div>
 </div>

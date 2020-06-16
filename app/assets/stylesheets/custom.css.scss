@@ -31,7 +31,6 @@ header {
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 
@@ -43,3 +42,25 @@ header {
 body {
   background: #E1E8ED;
 }
+
+.col-border {
+  border: 1px solid rgb(146, 145, 145);
+}
+
+.col-left-border {
+  border-left: 1px solid rgb(146, 145, 145);
+}
+
+.col-top-border {
+  border-top: 1px solid rgb(146, 145, 145);
+}
+
+.who-border {
+  border-bottom: 1px solid rgb(146, 145, 145);
+  color: rgb(28, 28, 68);
+}
+
+.opinion_nav {
+  border-bottom: 1px solid rgb(146, 145, 145);
+}
+

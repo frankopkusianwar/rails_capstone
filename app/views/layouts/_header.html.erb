@@ -1,16 +1,17 @@
 
   <% if logged_in? %>
     <%= render 'layouts/side'%>
-    <header class='d-flex justify-content-end main'>
-      <%= link_to "Log out", logout_path,  method: :delete %>
+    <header class='d-flex justify-content-between p-2 main'>
+      <h4 class="text-white">THE GUARD</h4>
+      <%= link_to "Logout", logout_path,  class: "text-white", method: :delete %>
     </header>
   <% else %>
-    <header class="container-fluid">
+    <header class="container-fluid p-2">
       <nav class="d-flex justify-content-between">
-        <p>THE GUARD</p>
+        <h4 class="text-white">THE GUARD</h4>
         <div>
-          <%= link_to "Login", root_path  %>
-          <%= link_to "Sign Up", signup_path  %>
+          <%= link_to "Login", root_path, class: "text-white"  %>
+          <%= link_to "SignUp", signup_path, class: "text-white" %>
         </div>
       </nav>
     </header>

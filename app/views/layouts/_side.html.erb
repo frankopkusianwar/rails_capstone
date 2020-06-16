@@ -1,9 +1,7 @@
 <!-- Side navigation -->
 <div class="sidenav">
-  <p class="text-white ml-2"><%= current_user.fullname %></p>
+  <p class="text-muted ml-2"><%= current_user.fullname %></p>
   <%= render 'opinions/stats' %> 
-  <%= link_to 'Home', opinions_path %>
-  <a href="#">Connect</a>
-  <a href="#">Discover</a>
-  <a href="#">Profile</a>
+  <div class="d-flex mt-3"><i class="fa fa-home mt-3 ml-2 text-muted"></i><%= link_to 'Home', opinions_path %></div>
+  <div class="d-flex"><i class="fa fa-user mt-3 ml-2 text-muted"></i><%= link_to 'Profile', user_path(current_user) %></div>
 </div>
