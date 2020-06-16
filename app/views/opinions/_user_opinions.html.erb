@@ -1,0 +1,6 @@
+<div class="container bg-white p-3 mt-2">
+  <% @opinions.each do |op|%>
+    <h6><%= op.user.username %></h6>
+    <p><%= op.Text %></p>
+  <%end%>
+</div>

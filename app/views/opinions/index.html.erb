@@ -4,28 +4,18 @@
       <nav class='opinion_nav'>
         <%= link_to 'opinions', opinions_path %>
       </nav>
-      <div class="container bg-white p-3">
-        <%= form_with model: @opinion, local: true do |f| %>
-          <div class="form-group">
-            <%= f.text_field :Text, class: 'form-control', placeholder: 'Share your Opinion on farming'%>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        <% end %>
-      </div>
-      <div class="container bg-white p-3 mt-2">
-        <% @opinions.each do |op|%>
-          <h6><%= op.user.username %></h6>
-          <p><%= op.Text %></p>
-        <%end%>
-      </div>
+      <%= render 'opinion_form'%>
+      <%= render 'user_opinions'%>
     </div>
     <div class="col-2">
       <h6>Who to follow</h6>
         <% @users.each do |us|%>
-          <% unless us == current_user %>
-            <h6><%= us.username  %></h6>
-            <% @user = us %>
-            <%= render 'users/follow_form' %>
+          <% unless current_user?(us) %>
+            <% unless current_user.following?(us) %>
+              <h6><%= us.fullname %></h6>
+              <% @user = us %>
+              <%= render 'users/follow_form' %>
+            <%end%>
           <%end%>
         <%end%>
     </div>

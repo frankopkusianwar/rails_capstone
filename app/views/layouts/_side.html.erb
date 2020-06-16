@@ -1,7 +1,8 @@
 <!-- Side navigation -->
 <div class="sidenav">
-  <%# <%= render 'opinions/stats' %> 
-  <%= link_to 'Home', opinions_path%>
+  <p class="text-white ml-2"><%= current_user.fullname %></p>
+  <%= render 'opinions/stats' %> 
+  <%= link_to 'Home', opinions_path %>
   <a href="#">Connect</a>
   <a href="#">Discover</a>
   <a href="#">Profile</a>

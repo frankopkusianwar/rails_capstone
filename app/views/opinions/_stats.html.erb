@@ -1,11 +1,14 @@
-<% @user ||= session[:user_id] %>
-  <div class="stats">
-  <%= link_to 'following', following_user_path(@user) %>
+<div class="row">
+  <div class="col-6 text-center">
     <strong id="following" class="stat">
-     <%= @user.following.count %>
+      <p class="text-white"><%= current_user.following.count %></p>
     </strong>
-  <%= link_to 'followers', followers_user_path(@user) %>">
+    <small class="text-white">following</small>
+  </div>
+  <div class="col-6 text-center">
     <strong id="followers" class="stat">
-      <%= @user.followers.count %>
+      <p class="text-white"><%= current_user.followers.count %></p>
     </strong>
+    <small class="text-white">followers</small>
+  </div>
 </div>

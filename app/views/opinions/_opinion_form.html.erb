@@ -1,0 +1,8 @@
+<div class="container bg-white p-3">
+  <%= form_with model: @opinion, local: true do |f| %>
+    <div class="form-group">
+      <%= f.text_field :Text, class: 'form-control', placeholder: 'Share your Opinion on farming'%>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  <% end %>
+</div>
