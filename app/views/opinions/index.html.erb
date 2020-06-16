@@ -12,9 +12,7 @@
         <% @users.each do |us|%>
           <% unless current_user?(us) %>
             <% unless current_user.following?(us) %>
-              <h6><%= us.fullname %></h6>
-              <% @user = us %>
-              <%= render 'users/follow_form' %>
+              <h6><%= link_to us.fullname, user_path(us) %></h6>
             <%end%>
           <%end%>
         <%end%>
