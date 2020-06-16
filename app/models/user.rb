@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :passive_relationships, class_name: "Following", foreign_key: "followed_id", dependent: :destroy
   has_many :followers, through: :passive_relationships, source: :follower
 
+  has_one_attached :image
+
   # Following a user.
   def follow(other_user)
     following << other_user

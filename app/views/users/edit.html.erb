@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <%= form_with model: @user, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :fullname %>
+      <%= f.text_field :fullname, class: 'form-control', placeholder: 'fullname'%>
+    </div>
+    <div class="form-group">
+      <%= f.label :username %>
+      <%= f.text_field :username, class: 'form-control', placeholder: 'username'%>
+    </div>
+    <div class="form-group">
+      <div><%= f.label :picture %></div>
+      <div><%= f.file_field :image %></div>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Acccount</button>
+  <% end %>
+</div>
