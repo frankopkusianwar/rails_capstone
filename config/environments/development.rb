@@ -61,7 +61,7 @@ Rails.application.configure do
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.after_initialize do
     #Enable bullet in your application
-    Bullet.enable = true
-    Bullet.alert = true
+    Bullet.enable = false
+    Bullet.alert = false
   end
 end

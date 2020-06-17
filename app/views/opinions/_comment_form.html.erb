@@ -1,0 +1,7 @@
+<%= form_for @comment do |form| %>
+  <div class="form-group">
+    <%= form.text_field :content, class: '', placeholder: 'Add comment' %>
+    <%= form.text_field :opinion_id, value: @op.id, hidden: true %>
+    <%= form.submit 'Comment', class: 'btn-primary' %>
+  </div>
+<% end %>

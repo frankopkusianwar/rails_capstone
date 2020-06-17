@@ -3,6 +3,7 @@ class OpinionsController < ApplicationController
     @opinion = Opinion.new
     @opinions = Opinion.order(created_at: :desc).includes(:user)
     @users = User.order(created_at: :desc)
+    @comment = Comment.new
   end
 
   def create
