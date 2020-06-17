@@ -4,9 +4,9 @@
       <div class="row ml-3">
         <div class="col-6 p-1 mt-1 prof-img-3 d-flex">
           <%= image_tag op.user.image, class: "mr-2" if op.user.image.attached? %>
-          <div>
+          <div class="font-weight-bold">
             <%= op.user.fullname %>
-            <p><%= op.Text %></p>
+            <p class="font-weight-normal"><%= op.Text %></p>
             <% @op = op %>
             <%= render 'comment_form'%>
           </div>
