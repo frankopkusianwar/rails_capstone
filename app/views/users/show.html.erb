@@ -1,6 +1,6 @@
 <div class="container-fluid page-content">
   <div class="row">
-    cover picture here
+    <%= image_tag @user.cover_image if @user.cover_image.attached? %>
   </div>
   <div class="row">
     <div class="col-9">

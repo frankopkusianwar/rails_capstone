@@ -9,10 +9,10 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.image.attach(params[:user][:image])
+    # @user.image.attach(params[:user][:image])
+    # @user.image.attach(params[:user][:cover_image])
     if @user.update(user_params)
-      flash[:success] = 'Your profile was edited.'
-      redirect_to new_user_path
+      redirect_to user_path(@user)
     else
       render 'edit'
     end
@@ -36,10 +36,14 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:fullname, :username)
+    params.require(:user).permit(:fullname, :username, :image, :cover_image)
   end
 
-  def user_params
-    params.require(:user).permit(:content, :image)
-  end
+  # def image_params
+  #   params.require(:user).permit(:content, :image)
+  # end
+
+  # def cover_image_params
+  #   params.require(:user).permit(:content, :cover_image)
+  # end
 end
