@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_one_attached :image
   has_one_attached :cover_image
 
+  has_many :comments, dependent: :destroy
+
   # Following a user.
   def follow(other_user)
     following << other_user
