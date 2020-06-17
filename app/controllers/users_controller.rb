@@ -9,8 +9,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    # @user.image.attach(params[:user][:image])
-    # @user.image.attach(params[:user][:cover_image])
     if @user.update(user_params)
       redirect_to user_path(@user)
     else
