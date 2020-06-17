@@ -1,8 +1,11 @@
 <div class="container">
   <% @opinions.each do |op|%>
     <div class="bg-white">
-      <h6 class="p-1 mt-1"><%= op.user.fullname %></h6>
-      <p class="p-1 mt-1"><%= op.Text %></p>
+      <h6 class="p-1 mt-1 prof-img-3">
+        <%= image_tag op.user.image, class: "mr-2" if op.user.image.attached? %><%= op.user.fullname %>
+      </h6>
+      <p class="p-1 body-text"><%= op.Text %></p>
+      
     </div>
   <%end%>
 </div>

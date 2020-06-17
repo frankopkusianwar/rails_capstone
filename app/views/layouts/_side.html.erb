@@ -1,6 +1,12 @@
 <!-- Side navigation -->
 <div class="sidenav">
-  <p class="text-muted ml-2"><%= current_user.fullname %></p>
+  <div class="d-flex">
+    <div class="ml-2">
+      <p class="text-muted prof-img-2">
+          <%= image_tag current_user.image, class: "mr-2" if current_user.image.attached? %><%= current_user.fullname %>
+        </p>
+    </div>
+  </div>
   <%= render 'opinions/stats' %> 
   <div class="d-flex mt-3"><i class="fa fa-home mt-3 ml-2 text-muted"></i><%= link_to 'Home', opinions_path %></div>
   <div class="d-flex"><i class="fa fa-user mt-3 ml-2 text-muted"></i><%= link_to 'Profile', user_path(current_user) %></div>
