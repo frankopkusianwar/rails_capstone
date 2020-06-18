@@ -1,6 +1,15 @@
 
 <p class="font-weight-bold d-flex justify-content-center mt-4">FOLLOWED BY</p>
 <% @user.followers.each do |us|%>
-    <div class="ml-3 mt-2"><small><%= link_to us.fullname, user_path(us), class: "text-dark text-decoration-none font-weight-bold" %></small></div>
-    <div class="ml-3 border-bottom border-light pb-1"><small>@<%= us.username %></small></div>
+  <div class="ml-3 mt-2">
+    <small>
+      <div class="prof-img d-flex border-bottom border-light pb-1">
+        <%= image_tag us.image if us.image.attached? %>
+        <div class="ml-3 mt-2">
+          <%= link_to us.fullname, user_path(us), class: "text-dark text-decoration-none font-weight-bold"%>
+          <div>@<%= us.username %></div>
+        </div>
+      </div>
+    </small>
+  </div>
 <%end%>
