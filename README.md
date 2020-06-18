@@ -13,11 +13,13 @@ In this project worked on the Ruby on Rails capstone based on a redesign of Twit
 - You can comment on farmer's opinions.
 - You can update your profile with profile photo and cover image.
 
-![screenshot]()
 
-## test cases
+## Home page
+![screenshot](./readmeimg.PNG)
 
-![screenshot]()
+## Profile page
+
+![screenshot](./profpage)
 
 ## Built With
 
@@ -30,7 +32,7 @@ In this project worked on the Ruby on Rails capstone based on a redesign of Twit
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://sleepy-escarpment-15763.herokuapp.com/)
 
 ## Getting Started
 
