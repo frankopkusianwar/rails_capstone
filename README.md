@@ -4,12 +4,14 @@
 
 In this project worked on the Ruby on Rails capstone based on a redesign of Twitter. I changed the theme of the app to share opinions about farming, with people who a particular user. I added my own app name and logo!
 
-## How to run the project locally
+## FEATURES
 
-- on your terminal run bundle install
-- run migrations ```rails db:migrate```
-- start the server ```rails s```
-- open app in browser ```http://localhost:3000/```
+- You can sign up with username and fullname.
+- Login with username only username.
+- You can share your farming opinions.
+- You can follow other farmers.
+- You can comment on farmer's opinions.
+- You can update your profile with profile photo and cover image.
 
 ![screenshot]()
 
@@ -36,19 +38,22 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Ruby, ruby on rails
+- Ruby 2.6. 6
+- rails 6
 - rspec
-
-### Usage
-
-- Clone the project to your local machine
 
 ## Instructions
 
-- on your terminal run bundle install
-- run migrations ```rails db:migrate```
-- start the server ```rails s```
-- open app in browser ```http://localhost:3000/```
+git clone https://github.com/frankopkusianwar/rails_capstone.git
+cd rails_capstone
+bundle install
+rails rails db:migrate
+rails server
+
+### Usage
+
+- Type ```http://localhost:3000/``` to the browsr tab.
+- Now you can create a user easily and share opinions.
 
 ## Author
 
