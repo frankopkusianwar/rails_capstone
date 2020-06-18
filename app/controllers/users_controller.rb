@@ -15,13 +15,13 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def show
     @user = User.find(params[:id])
     @opinions = @user.opinions
     @users = User.all
   end
-  
+
   def create
     @user = User.new(params.require(:user).permit(:fullname, :username))
     if @user.save
@@ -33,6 +33,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:fullname, :username, :image, :cover_image)
   end

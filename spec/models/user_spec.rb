@@ -19,11 +19,11 @@ RSpec.describe User, type: :model do
     it { should have_many(:following).through(:active_relationships) }
     it { should have_many(:followers).through(:passive_relationships) }
     it { should have_many(:comments) }
-    it 'has one cover image' do 
-      expect(user).to respond_to(:cover_image) 
+    it 'has one cover image' do
+      expect(user).to respond_to(:cover_image)
     end
-    it 'has one cover image' do 
-      expect(user).to respond_to(:image) 
+    it 'has one cover image' do
+      expect(user).to respond_to(:image)
     end
   end
   describe 'methods' do
