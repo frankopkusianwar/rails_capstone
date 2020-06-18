@@ -44,11 +44,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Instructions
 
-git clone https://github.com/frankopkusianwar/rails_capstone.git
-cd rails_capstone
-bundle install
-rails rails db:migrate
-rails server
+- git clone https://github.com/frankopkusianwar/rails_capstone.git
+- cd rails_capstone
+- bundle install
+- rails rails db:migrate
+- rails server
 
 ### Usage
 
