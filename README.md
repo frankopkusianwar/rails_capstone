@@ -2,7 +2,7 @@
 
 ## Description
 
-In this project worked on the Ruby on Rails capstone based on a redesign of Twitter. I changed the theme of the app to share opinions about farming, with people who a particular user. I added my own app name and logo!
+In this project I worked on the Ruby on Rails capstone based on a redesign of Twitter. I changed the theme of the app to share opinions about farming, with people who follow a particular user. I added my own app name and logo!
 
 ## FEATURES
 
