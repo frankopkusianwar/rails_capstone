@@ -13,13 +13,12 @@ In this project worked on the Ruby on Rails capstone based on a redesign of Twit
 - You can comment on farmer's opinions.
 - You can update your profile with profile photo and cover image.
 
-
 ## Home page
-![screenshot](./spiderhome.png)
+![screenshot](./spiderhome.PNG)
 
 ## Profile page
 
-![screenshot](./profpage.png)
+![screenshot](./profpage.PNG)
 
 ## Built With
 
