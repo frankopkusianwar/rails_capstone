@@ -15,11 +15,11 @@ In this project worked on the Ruby on Rails capstone based on a redesign of Twit
 
 
 ## Home page
-![screenshot](./readmeimg.PNG)
+![screenshot](./readmeimg.png)
 
 ## Profile page
 
-![screenshot](./profpage)
+![screenshot](./profpage.png)
 
 ## Built With
 
