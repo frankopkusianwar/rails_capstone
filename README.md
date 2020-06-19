@@ -15,7 +15,7 @@ In this project worked on the Ruby on Rails capstone based on a redesign of Twit
 
 
 ## Home page
-![screenshot](./readmeimg.png)
+![screenshot](./spiderhome.png)
 
 ## Profile page
 
