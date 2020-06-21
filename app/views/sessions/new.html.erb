@@ -3,6 +3,7 @@
     <h3>Login Here</h3>
     <p>To share your farming opinions</p>
   </div>
+  <small class="text-danger"><%= alert %></small>
   <%= form_with model: @user, local: true do |f| %>
     <div class="form-group">
       <%= f.label :username %>
