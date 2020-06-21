@@ -37,12 +37,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:fullname, :username, :image, :cover_image)
   end
-
-  # def image_params
-  #   params.require(:user).permit(:content, :image)
-  # end
-
-  # def cover_image_params
-  #   params.require(:user).permit(:content, :cover_image)
-  # end
 end
