@@ -1,14 +1,14 @@
 <div class="container-fluid page-content">
   <div class="row">
     <div class="col-9">
-      <nav class='opinion_nav mb-3 mt-3'>
+      <nav class='opinion_nav mb-3 mt-5'>
         <h6>Recent Opinions</h6>
       </nav>
       <%= render 'opinion_form'%>
       <%= render 'user_opinions'%>
     </div>
     <div class="col-3 col-left-border">
-      <div class="who-border text-center mb-2 mt-3"><h6 class="font-weight-bold">Who to follow</h6></div>
+      <div class="who-border text-center mb-3 pb-4 mt-4"><h6 class="font-weight-bold text-muted">Who to follow</h6></div>
         <% @users.each do |us|%>
           <% unless current_user?(us) %>
             <% unless current_user.following?(us) %>
