@@ -14,6 +14,8 @@ class User < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+  default_scope { order("created_at DESC") }
+
   # Following a user.
   def follow(other_user)
     following << other_user

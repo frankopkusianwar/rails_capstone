@@ -1,8 +1,8 @@
 class OpinionsController < ApplicationController
   def index
     @opinion = Opinion.new
-    @opinions = Opinion.order(created_at: :desc).includes(:user).includes(:comments)
-    @users = User.order(created_at: :desc)
+    @opinions = Opinion.includes(:user).includes(:comments)
+    @users = User.all
     @comment = Comment.new
   end
 
