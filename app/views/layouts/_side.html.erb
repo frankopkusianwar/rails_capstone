@@ -7,7 +7,7 @@
         </p>
     </div>
   </div>
-  <%= render 'opinions/stats' %> 
-  <div class="d-flex mt-3"><i class="fa fa-home mt-3 ml-2 text-muted"></i><%= link_to 'Home', opinions_path %></div>
-  <div class="d-flex"><i class="fa fa-user mt-3 ml-2 text-muted"></i><%= link_to 'Profile', user_path(current_user) %></div>
+  <%= render 'opinions/stats' %>
+    <div class="d-flex <%= current_class?(opinions_path)%>"><i class="fa fa-home mt-3 ml-2 text-muted"></i><%= link_to 'Home', opinions_path %></div>
+    <div class="d-flex <%= current_class?(user_path(current_user))%>"><i class="fa fa-user mt-3 ml-2 text-muted"></i><%= link_to 'Profile', user_path(current_user) %></div>
 </div>
