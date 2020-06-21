@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       log_in @user
       redirect_to opinions_path
     elsif params[:username] && !@user
-      flash[:alert] = "invalid username."
+      flash[:alert] = 'invalid username.'
       redirect_to root_path
     else
       redirect_to root_path
