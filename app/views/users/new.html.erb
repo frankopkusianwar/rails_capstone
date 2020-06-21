@@ -4,13 +4,18 @@
     <p>To share your farming opinions</p>
   </div>
   <%= form_with model: @user, local: true do |f| %>
+    <%if @errors%>
+      <%@errors.each do |err|%>
+        <small class="text-danger"><%= err%></small><br>
+      <%end%>
+    <%end%>
     <div class="form-group">
       <%= f.label :fullname %>
-      <%= f.text_field :fullname, required: true, class: 'form-control', placeholder: 'fullname'%>
+      <%= f.text_field :fullname, class: 'form-control', placeholder: 'fullname'%>
     </div>
     <div class="form-group">
       <%= f.label :username %>
-      <%= f.text_field :username, required: true, class: 'form-control', placeholder: 'username'%>
+      <%= f.text_field :username, class: 'form-control', placeholder: 'username'%>
     </div>
     <button type="submit" class="btn btn-primary">Create Acccount</button>
   <% end %>

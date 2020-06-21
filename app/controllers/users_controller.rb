@@ -28,6 +28,7 @@ class UsersController < ApplicationController
       log_in @user
       redirect_to opinions_path
     else
+      @errors = @user.errors.full_messages
       render 'users/new'
     end
   end
