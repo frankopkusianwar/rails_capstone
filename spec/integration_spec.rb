@@ -45,7 +45,51 @@ RSpec.describe 'Testing the authentication', type: :system do
       expect(page).to have_content('Recent Opinions')
       fill_in 'opinion', with: opinion.Text
       click_on 'Submit'
+      expect(Opinion.find_by(Text: opinion.Text)).to be_an(Opinion)
+    end
+
+    scenario 'create opinion with invalid parameters' do
+      visit root_path
+      fill_in 'username', with: user.username
+      click_on 'Submit'
+      expect(page).to have_content('Recent Opinions')
+      fill_in 'opinion', ' '
+      click_on 'Submit'
+      expect(Opinion.find_by(name: opinion.Text)).to be_an(Opinion)
+    end
+
+    scenario 'view user opinions' do
+      visit root_path
+      fill_in 'username', with: user.username
+      click_on 'Submit'
+      expect(page).to have_content('Recent Opinions')
+      fill_in 'opinion', with: opinion.Text
+      click_on 'Submit'
+      expect(Opinion.find_by(Text: opinion.Text)).to be_an(Opinion)
+      click_on 'Home'
       expect(page).to have_content(opinion.Text)
+    end
+  end
+
+  feature 'following system' do
+    scenario 'Follow user' do
+      visit root_path
+      fill_in 'username', with: user.username
+      click_on 'Submit'
+      expect(page).to have_content('Recent Opinions')
+      click_on 'Follow'
+      expect(page).to have_content('Unfollow')
+    end
+
+    scenario 'unfollow a user' do
+      visit root_path
+      fill_in 'username', with: user.username
+      click_on 'Submit'
+      expect(page).to have_content('Recent Opinions')
+      click_on 'Follow'
+      expect(page).to have_content('Unfollow')
+      click_on 'Unfollow'
+      expect(page).to have_content('Follow')
     end
   end
 end
