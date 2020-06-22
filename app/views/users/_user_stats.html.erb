@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="prof-img d-flex justify-content-center mt-3"><%= image_tag @user.image if @user.image.attached? %></div>
+  <div class="col-12 d-flex justify-content-center"><h6><%= @user.fullname %></h6></div>
+  <div class="col-12 d-flex justify-content-center mb-3"><small class="text-muted">@<%= @user.username %></small></div>
+  <div class="col-12 d-flex justify-content-center">
+    <h6><%= render 'follow_form' unless @user == current_user%></h6>
+    <small class="mb-3"><%= render 'edit_form' if @user == current_user%></small>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4 text-center col-border">
+    <strong id="following" class="stat">
+      <p class="text-dark"><%= @user.following.count %></p>
+    </strong>
+    <h6 class="mr-1 text-muted">following</h6>
+  </div>
+  <div class="col-4 text-center col-border">
+    <strong id="followers" class="stat">
+      <p class="text-dark"><%= @user.followers.count %></p>
+    </strong>
+    <h6 class="mr-1 text-muted">followers</h6>
+  </div>
+  <div class="col-4 text-center col-border">
+    <strong id="followers" class="stat">
+      <p class="text-dark"><%= @opinions.count %></p>
+    </strong>
+    <h6 class="text-muted">opinions</h6>
+  </div>
+</div>

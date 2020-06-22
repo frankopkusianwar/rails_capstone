@@ -1,0 +1,26 @@
+<div class="container mb-4">
+  <% @opinions.each do |op|%>
+    <div class="bg-white mt-2">
+      <div class="row ml-3">
+        <div class="col-6 p-1 mt-1 prof-img-3 d-flex">
+          <%= image_tag op.user.image, class: "mr-2" if op.user.image.attached? %>
+          <div class="font-weight-bold">
+            <%= op.user.fullname %>
+            <p class="font-weight-normal"><%= op.Text %></p>
+            <% @op = op %>
+            <%= render 'comment_form'%>
+          </div>
+        </div>
+        <div class="col-6">
+          <p class="font-weight-bold">Comments<small>(<%= op.comments.count %>)</small></p>
+          <% op.comments.each do |com| %>
+            <div class="border-bottom">
+              <%= com.content %><br>
+              <small class="ml-2">By: <%= com.user.username%></small>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  <%end%>
+</div>

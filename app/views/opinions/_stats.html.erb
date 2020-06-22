@@ -1,0 +1,14 @@
+<div class="row mx-1">
+  <div class="col-6 text-center border border-dark">
+    <strong id="following" class="stat">
+      <p class="text-muted"><%= current_user.following.count %></p>
+    </strong>
+    <small class="text-muted">following</small>
+  </div>
+  <div class="col-6 text-center border border-dark">
+    <strong id="followers" class="stat">
+      <p class="text-muted"><%= current_user.followers.count %></p>
+    </strong>
+    <small class="text-muted">followers</small>
+  </div>
+</div>

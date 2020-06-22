@@ -1,0 +1,14 @@
+<div class="container w-50 mt-5 border border rounded border-light p-5">
+  <div class="text-center">
+    <h3>Login Here</h3>
+    <p>To share your farming opinions</p>
+  </div>
+  <small class="text-danger"><%= alert %></small>
+  <%= form_with model: @user, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :username %>
+      <%= f.text_field :username, required: true, id: 'username', class: 'form-control', placeholder: 'username'%>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  <% end %>
+</div>
