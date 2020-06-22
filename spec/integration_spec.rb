@@ -43,7 +43,7 @@ RSpec.describe 'Testing the authentication', type: :system do
       fill_in 'username', with: user.username
       click_on 'Submit'
       expect(page).to have_content('Recent Opinions')
-      fill_in 'opinion', with: opinion.Text
+      fill_in 'opinion_Text', with: opinion.Text
       click_on 'Submit'
       expect(Opinion.find_by(Text: opinion.Text)).to be_an(Opinion)
     end
@@ -53,7 +53,7 @@ RSpec.describe 'Testing the authentication', type: :system do
       fill_in 'username', with: user.username
       click_on 'Submit'
       expect(page).to have_content('Recent Opinions')
-      fill_in 'opinion', ' '
+      fill_in 'opinion_Text', ' '
       click_on 'Submit'
       expect(Opinion.find_by(name: opinion.Text)).to be_an(Opinion)
     end
@@ -63,7 +63,7 @@ RSpec.describe 'Testing the authentication', type: :system do
       fill_in 'username', with: user.username
       click_on 'Submit'
       expect(page).to have_content('Recent Opinions')
-      fill_in 'opinion', with: opinion.Text
+      fill_in 'opinion_Text', with: opinion.Text
       click_on 'Submit'
       expect(Opinion.find_by(Text: opinion.Text)).to be_an(Opinion)
       click_on 'Home'
@@ -72,24 +72,28 @@ RSpec.describe 'Testing the authentication', type: :system do
   end
 
   feature 'following system' do
+    user2 = FactoryBot.build(:user)
     scenario 'Follow user' do
       visit root_path
       fill_in 'username', with: user.username
       click_on 'Submit'
-      expect(page).to have_content('Recent Opinions')
+      expect(page).to have_content(user2.fullmane)
+      click_on user2.fullname
       click_on 'Follow'
       expect(page).to have_content('Unfollow')
     end
 
     scenario 'unfollow a user' do
-      visit root_path
-      fill_in 'username', with: user.username
-      click_on 'Submit'
-      expect(page).to have_content('Recent Opinions')
-      click_on 'Follow'
-      expect(page).to have_content('Unfollow')
-      click_on 'Unfollow'
-      expect(page).to have_content('Follow')
-    end
+      user2 = FactoryBot.build(:user)
+      scenario 'Follow user' do
+        visit root_path
+        fill_in 'username', with: user.username
+        click_on 'Submit'
+        expect(page).to have_content(user2.fullmane)
+        click_on user2.fullname
+        click_on 'Follow'
+        click_on 'Unfollow'
+        expect(page).to have_content('Unfollow')
+      end
   end
 end
