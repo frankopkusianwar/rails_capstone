@@ -70,30 +70,4 @@ RSpec.describe 'Testing the authentication', type: :system do
       expect(page).to have_content(opinion.Text)
     end
   end
-​
-  feature 'following a user' do
-    user2 = FactoryBot.create(:user)
-    scenario 'Follow user' do
-      visit root_path
-      fill_in 'username', with: user.username
-      click_on 'Submit'
-      expect(page).to have_content(user2.fullname)
-      click_on user2.fullname
-      click_on 'Follow'
-      expect(page).to have_content('Unfollow')
-    end
-  end
-  feature 'unfollowing a user' do
-    user3 = FactoryBot.create(:user)
-    scenario 'Unfollow user' do
-      visit root_path
-      fill_in 'username', with: user.username
-      click_on 'Submit'
-      expect(page).to have_content(user3.fullname)
-      click_on user3.fullname
-      click_on 'Follow'
-      click_on 'Unfollow'
-      expect(page).to have_content('Follow')
-    end
-  end
 end

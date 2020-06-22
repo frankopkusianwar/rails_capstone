@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    sequence(:fullname) { |n| "#{n}#{Faker::Name.name}" }
+    fullname { 'frank okiror' }
     sequence(:username) { |n| "#{n}#{Faker::Internet.username}" }
   end
 end
