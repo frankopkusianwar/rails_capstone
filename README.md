@@ -56,6 +56,10 @@ To get a local copy up and running follow these simple example steps.
 - Type ```http://localhost:3000/``` to the browsr tab.
 - Now you can create a user easily and share opinions.
 
+### Usage
+
+- To run tests use `bundle excec rspec`
+
 ## Author
 
 - Okiror Frank
